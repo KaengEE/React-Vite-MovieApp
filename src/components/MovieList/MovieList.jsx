@@ -1,6 +1,7 @@
 import "./MovieList.css";
 import Fire from "../../assets/fire.png";
 import MovieCard from "./MovieCard";
+import _ from "lodash"; //lodash
 //rfc
 import React, { useEffect, useState } from "react";
 
@@ -41,7 +42,15 @@ export default function MovieList() {
     const { name, value } = e.target;
     setSort((prev) => ({ ...prev, [name]: value }));
   }
-  console.log(sort);
+
+  //정렬
+  useEffect(() => {
+    if (sort.by !== "default") {
+      //sort.by가 default가 아닐때
+      const sortedMovies = _.orderBy(filterMovies, [sort.by], [sort.order]); //lodash
+      setFilterMovies(sortedMovies);
+    }
+  }, [sort]);
 
   useEffect(() => {
     fetchMovies();
@@ -114,7 +123,7 @@ export default function MovieList() {
       {/* 무비카드 */}
       <div className="movie_cards">
         {filterMovies.map((movie) => (
-          <MovieCard key={movies.id} movie={movie} />
+          <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
     </section>
