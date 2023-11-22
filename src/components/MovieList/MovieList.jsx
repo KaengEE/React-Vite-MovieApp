@@ -2,9 +2,11 @@ import "./MovieList.css";
 import Fire from "../../assets/fire.png";
 import MovieCard from "./MovieCard";
 //rfc
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function MovieList() {
+  const [movies, setMovies] = useState([]);
+
   async function fetchMovies() {
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=${
@@ -12,7 +14,7 @@ export default function MovieList() {
       }&language=ko`
     );
     const data = await response.json();
-    console.log(data);
+    setMovies(data.results);
   }
 
   useEffect(() => {
@@ -47,7 +49,9 @@ export default function MovieList() {
       </header>
       {/* 무비카드 */}
       <div className="movie_cards">
-        <MovieCard />
+        {movies.map((movie) => (
+          <MovieCard key={movies.id} movie={movie} />
+        ))}
       </div>
     </section>
   );
