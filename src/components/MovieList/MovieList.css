@@ -2,16 +2,18 @@
   padding: 10px 30px;
   justify-content: space-between;
   margin-bottom: 5px;
+  color: var(--body_color);
 }
 .movie_list_heading {
   font-size: 26px;
-  color: #ffe400;
+  color: var(--heading_color);
 }
 .movie_filter {
   list-style: none;
   font-size: 16px;
 }
 .movie_filter_item {
+  color: var(--body_color);
   padding: 5px 10px;
   cursor: pointer;
 }

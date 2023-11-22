@@ -5,15 +5,29 @@
   font-style: normal;
 }
 
+/* 변수 */
+:root {
+  --body_backgroud: #101010;
+  --body_color: #fff;
+  --heading_color: whitesmoke;
+}
+
+[data-theme="light"] {
+  --body_backgroud: #fff;
+  --body_color: #000;
+  --heading_color: #000;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
 }
 
 body {
-  background-color: #101010;
-  color: #fff;
+  background-color: var(--body_backgroud);
+  color: var(--body_color);
   font-family: "EASTARJET-Medium", sans-serif;
 }
 

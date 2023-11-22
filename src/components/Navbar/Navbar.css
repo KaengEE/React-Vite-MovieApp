@@ -8,7 +8,7 @@
 
 .navbar > h1 {
   font-size: 30px;
-  color: whitesmoke;
+  color: var(--heading_color);
   /* text그림자 */
   text-shadow: 1px 1px 15px yellow;
 }
@@ -24,7 +24,7 @@
   margin-right: 10px;
   font-size: 20px;
   font-weight: 500;
-  color: #fff;
+  color: var(--body_color);
   text-decoration: none;
   padding: 0 5px;
 }

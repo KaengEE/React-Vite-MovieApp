@@ -11,9 +11,10 @@
   display: flex;
   text-align: center;
   justify-content: center;
+  color: var(--body_color);
 }
 
 .footer_text a {
-  color: white;
+  color: var(--body_color);
   padding-left: 5px;
 }
