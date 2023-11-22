@@ -16,3 +16,9 @@ body {
   color: #fff;
   font-family: "EASTARJET-Medium", sans-serif;
 }
+
+/* 공통적으로 자주쓰는 세로가운데정렬 */
+.align_center {
+  display: flex;
+  align-items: center;
+}
