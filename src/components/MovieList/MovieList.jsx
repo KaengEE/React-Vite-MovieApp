@@ -8,6 +8,10 @@ export default function MovieList() {
   const [movies, setMovies] = useState([]);
   const [filterMovies, setFilterMovies] = useState([]); //평점으로 구분
   const [minRating, setMinRating] = useState(0); //최소점수
+  const [sort, setSort] = useState({
+    by: "default",
+    order: "asc",
+  });
 
   async function fetchMovies() {
     const response = await fetch(
@@ -31,6 +35,13 @@ export default function MovieList() {
       setFilterMovies(filtered);
     }
   }
+
+  //정렬 함수
+  function handleSort(e) {
+    const { name, value } = e.target;
+    setSort((prev) => ({ ...prev, [name]: value }));
+  }
+  console.log(sort);
 
   useEffect(() => {
     fetchMovies();
@@ -79,14 +90,24 @@ export default function MovieList() {
             </li>
           </ul>
 
-          <select name="" id="" className="movie_sorting">
-            <option value="">SortBy</option>
-            <option value="">날짜순</option>
-            <option value="">평점순</option>
+          <select
+            name="by"
+            id="by"
+            onChange={handleSort}
+            className="movie_sorting"
+          >
+            <option value="default">정렬기준</option>
+            <option value="release_date">날짜순</option>
+            <option value="vote_average">평점순</option>
           </select>
-          <select name="" id="" className="movie_sorting">
-            <option value="">오름차순</option>
-            <option value="">내림차순</option>
+          <select
+            name="order"
+            id="order"
+            onChange={handleSort}
+            className="movie_sorting"
+          >
+            <option value="asc">오름차순</option>
+            <option value="desc">내림차순</option>
           </select>
         </div>
       </header>
