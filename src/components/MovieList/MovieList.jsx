@@ -2,10 +2,12 @@ import "./MovieList.css";
 import Fire from "../../assets/fire.png";
 //rfc
 import React from "react";
+import MovieCard from "./MovieCard";
 
 export default function MovieList() {
   return (
     <section className="movie_list">
+      {/* 무비헤더 */}
       <header className="align_center movie_list_header">
         <h2 className="align_center movie_list_header">
           <img src={Fire} alt="fire emoji" className="navbar_emoji" /> 인기순
@@ -29,8 +31,10 @@ export default function MovieList() {
           </select>
         </div>
       </header>
-
-      <div className="movie_cards"></div>
+      {/* 무비카드 */}
+      <div className="movie_cards">
+        <MovieCard />
+      </div>
     </section>
   );
 }
