@@ -21,7 +21,7 @@ export default function MovieCard({ movie }) {
       <div className="movie_details">
         <h3 className="movie_details_heading">{movie.title}</h3>
         <div className="align_center movie_date_rate">
-          <p>{movie.release_data}</p>
+          <p className="align_center">{movie.release_date}</p>
           <p className="align_center">
             {movie.vote_average.toFixed(2)}
             <img src={Star} alt="rating icon" className="card_emoji" />
