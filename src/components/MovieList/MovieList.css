@@ -19,7 +19,7 @@
 }
 
 .movie_filter_item.active {
-  border-bottom: 2px solid #e6e6e6;
+  border-bottom: 2px solid var(--body_color);
   font-weight: 500;
 }
 .movie_sorting {
