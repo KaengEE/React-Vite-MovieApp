@@ -8,7 +8,8 @@ export default function MovieCard({ movie }) {
     // 영화 카드
     <a className="movie_card">
       <img
-        src="https://t1.daumcdn.net/movie/947a0d62f2772aa0f5c73b86b631779ef1183879"
+        src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}
+        `}
         alt="movie poster"
         className="movie_poster"
       />
