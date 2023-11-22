@@ -1,8 +1,15 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React 영화앱
 
-Currently, two official plugins are available:
+TMDB api를 사용하여 영화 DB가져옴
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+영화 클릭시 상세페이지로 이동
+
+평점에 따른 정렬(Lodash 라이브러리 사용)
+
+테마 적용 (다크모드/라이트모드)
+
+## 배포사이트
+
+<a href="">MovieApp</a>
