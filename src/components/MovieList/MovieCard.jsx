@@ -6,7 +6,11 @@ import React from "react";
 export default function MovieCard({ movie }) {
   return (
     // 영화 카드
-    <a className="movie_card">
+    <a
+      href={`https://www.themoviedb.org/movie/${movie.id}?language=ko`}
+      target="_blank"
+      className="movie_card"
+    >
       <img
         src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}
         `}
@@ -19,11 +23,11 @@ export default function MovieCard({ movie }) {
         <div className="align_center movie_date_rate">
           <p>{movie.release_data}</p>
           <p className="align_center">
-            {movie.vote_average}
+            {movie.vote_average.toFixed(2)}
             <img src={Star} alt="rating icon" className="card_emoji" />
           </p>
         </div>
-        <p className="movie_description">{movie.overview}</p>
+        <p className="movie_description">{movie.overview.slice(0, 100)}...</p>
       </div>
     </a>
   );
