@@ -1,4 +1,5 @@
 import "./Navbar.css";
+import DarkMode from "../DarkMode/DarkMode";
 //이미지
 import Fire from "../../assets/fire.png";
 import Star from "../../assets/glowing-star.png";
@@ -13,6 +14,7 @@ export default function Navbar() {
       <h1>MovieApp</h1>
 
       <div className="navbar_links">
+        <DarkMode />
         <a href="">
           <img className="navbar_emoji" src={Fire} alt="fire emoji" />
           인기순
