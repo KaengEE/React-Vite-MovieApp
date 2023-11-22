@@ -22,9 +22,14 @@ export default function MovieList() {
 
   //평점구분 함수
   function handleFilter(rate) {
-    setMinRating(rate); //최소점수
-    const filtered = movies.filter((movie) => movie.vote_average >= rate); //최소점수이상
-    setFilterMovies(filtered);
+    if (minRating === rate) {
+      setMinRating(0); //초기화
+      setFilterMovies(movies); //모든영화
+    } else {
+      setMinRating(rate); //최소점수
+      const filtered = movies.filter((movie) => movie.vote_average >= rate); //최소점수이상
+      setFilterMovies(filtered);
+    }
   }
 
   useEffect(() => {
