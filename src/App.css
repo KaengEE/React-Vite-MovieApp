@@ -2,3 +2,7 @@
   display: grid;
   grid-template-rows: 80px auto;
 }
+
+hr {
+  margin: 10px;
+}

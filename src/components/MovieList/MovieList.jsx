@@ -5,7 +5,7 @@ import _ from "lodash"; //lodash
 //rfc
 import React, { useEffect, useState } from "react";
 
-export default function MovieList() {
+export default function MovieList({ type, title, emoji }) {
   const [movies, setMovies] = useState([]);
   const [filterMovies, setFilterMovies] = useState([]); //평점으로 구분
   const [minRating, setMinRating] = useState(0); //최소점수
@@ -16,7 +16,7 @@ export default function MovieList() {
 
   async function fetchMovies() {
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${
+      `https://api.themoviedb.org/3/movie/${type}?api_key=${
         import.meta.env.VITE_MOVIE_API
       }&language=ko`
     );
@@ -57,11 +57,11 @@ export default function MovieList() {
   }, []);
 
   return (
-    <section className="movie_list">
+    <section className="movie_list" id={`${type}`}>
       {/* 무비헤더 */}
       <header className="align_center movie_list_header">
         <h2 className="align_center movie_list_header">
-          <img src={Fire} alt="fire emoji" className="navbar_emoji" /> 인기순
+          <img src={emoji} alt="fire emoji" className="navbar_emoji" /> {title}
         </h2>
 
         {/* 점수별 */}
