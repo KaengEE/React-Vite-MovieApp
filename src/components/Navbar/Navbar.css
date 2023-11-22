@@ -8,7 +8,9 @@
 
 .navbar > h1 {
   font-size: 30px;
-  color: #ffe400;
+  color: whitesmoke;
+  /* text그림자 */
+  text-shadow: 1px 1px 15px yellow;
 }
 
 .navbar_links {
@@ -19,15 +21,16 @@
 .navbar_links > a {
   display: flex;
   align-items: center;
+  margin-right: 10px;
   font-size: 20px;
   font-weight: 500;
   color: #fff;
   text-decoration: none;
-  padding: 0 15px;
+  padding: 0 5px;
 }
 
 .navbar_emoji {
   width: 25px;
   height: 25px;
-  margin-left: 7px;
+  margin-right: 7px;
 }

@@ -6,6 +6,7 @@ import Party from "../../assets/partying-face.png";
 
 import React from "react";
 
+//rfc 단축키
 export default function Navbar() {
   return (
     <nav className="navbar">
@@ -13,16 +14,16 @@ export default function Navbar() {
 
       <div className="navbar_links">
         <a href="">
-          인기순
           <img className="navbar_emoji" src={Fire} alt="fire emoji" />
+          인기순
         </a>
         <a href="">
-          평점순
           <img className="navbar_emoji" src={Star} alt="star emoji" />
+          평점순
         </a>
         <a href="">
-          최신순
           <img className="navbar_emoji" src={Party} alt="party emoji" />
+          최신순
         </a>
       </div>
     </nav>
