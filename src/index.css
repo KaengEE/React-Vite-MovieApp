@@ -25,6 +25,10 @@
   transition: all 0.2s ease-in-out;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--body_backgroud);
   color: var(--body_color);

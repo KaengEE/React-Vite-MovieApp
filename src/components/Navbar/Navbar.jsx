@@ -15,15 +15,15 @@ export default function Navbar() {
 
       <div className="navbar_links">
         <DarkMode />
-        <a href="">
+        <a href="#popular">
           <img className="navbar_emoji" src={Fire} alt="fire emoji" />
           인기순
         </a>
-        <a href="">
+        <a href="#top_rated">
           <img className="navbar_emoji" src={Star} alt="star emoji" />
           평점순
         </a>
-        <a href="">
+        <a href="#upcoming">
           <img className="navbar_emoji" src={Party} alt="party emoji" />
           최신순
         </a>
