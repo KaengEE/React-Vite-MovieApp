@@ -20,4 +20,4 @@ TMDB api를 사용하여 영화 DB가져옴
 
 ## 배포사이트
 
-<a href="">MovieApp</a>
+<a href="https://react-movie-kaenghee.netlify.app/">MovieApp</a>
