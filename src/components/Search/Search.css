@@ -37,3 +37,7 @@ button:hover {
   font-size: 15px;
   font-style: italic;
 }
+
+.search_result {
+  color: var(--body_color);
+}
