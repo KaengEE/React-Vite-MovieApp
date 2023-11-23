@@ -41,3 +41,9 @@ button:hover {
 .search_result {
   color: var(--body_color);
 }
+
+.search_title {
+  color: var(--body_color);
+  margin: 10px;
+  padding-bottom: 10px;
+}
