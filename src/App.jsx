@@ -6,11 +6,15 @@ import Navbar from "./components/Navbar/Navbar";
 import Fire from "./assets/Fire.png";
 import Star from "./assets/glowing-star.png";
 import Party from "./assets/partying-face.png";
+import { Search } from "./components/Search/Search";
+import { useState } from "react";
 
 function App() {
   return (
     <div className="app">
       <Navbar />
+      {/* 검색 */}
+      <Search />
       <MovieList type="popular" title="인기작품" emoji={Fire} />
       <hr />
       <MovieList type="top_rated" title="최고평점" emoji={Star} />
