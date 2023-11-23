@@ -3,7 +3,7 @@ import { Footer } from "./components/Footer/Footer";
 import MovieList from "./components/MovieList/MovieList";
 import Navbar from "./components/Navbar/Navbar";
 //이미지
-import Fire from "./assets/Fire.png";
+import Fire from "./assets/fire.png";
 import Star from "./assets/glowing-star.png";
 import Party from "./assets/partying-face.png";
 import { Search } from "./components/Search/Search";
