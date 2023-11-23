@@ -7,7 +7,6 @@ import Fire from "./assets/Fire.png";
 import Star from "./assets/glowing-star.png";
 import Party from "./assets/partying-face.png";
 import { Search } from "./components/Search/Search";
-import { useState } from "react";
 
 function App() {
   return (
@@ -21,6 +20,12 @@ function App() {
       <hr />
       <MovieList type="upcoming" title="예정작품" emoji={Party} />
       <Footer />
+      <button
+        className="fixed_button"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        TOP ▲
+      </button>
     </div>
   );
 }
