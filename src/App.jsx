@@ -20,6 +20,7 @@ function App() {
       <hr />
       <MovieList type="upcoming" title="예정작품" emoji={Party} />
       <Footer />
+      {/* 상단버튼 */}
       <button
         className="fixed_button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
